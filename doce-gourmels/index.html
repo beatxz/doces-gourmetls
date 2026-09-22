@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Bolos e doces artesanais sob encomenda em Betim e região. Morangos do amor, bombons, docinhos de festa, fondue e especiais de Natal." />
+<meta property="og:title" content="Doces da Lê — Doces artesanais sob encomenda" />
+<meta property="og:description" content="Doces artesanais preparados sob encomenda. Orçamentos pelo WhatsApp." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/morangos-branco-tabua.jpg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Quicksand:wght@400;500;600;700&family=Caveat:wght@500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #FFF9F7; color: #343434; font-family: 'Quicksand', system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  * { box-sizing: border-box; }
+  h1, h2, h3, h4 { margin: 0; font-weight: 400; }
+  p { margin: 0; text-wrap: pretty; }
+  img { display: block; max-width: 100%; }
+  a { color: #D4799B; text-decoration: none; }
+  a:hover { color: #B85C7E; }
+  button { font-family: inherit; }
+  :focus-visible { outline: 2px solid #D4799B; outline-offset: 3px; border-radius: 4px; }
+  @keyframes floatSoft { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+  @keyframes waPop { 0% { transform: scale(0.4); opacity: 0; } 60% { transform: scale(1.12); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
+  @media print { body { background: #fff; } }
+</style>
+</helmet>
+
+<div style="font-family: 'Quicksand', sans-serif; background: #FFF9F7; overflow-x: hidden;">
+
+  <div style="background: #A8DDD8; color: #2C5F5A; text-align: center; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; padding: 9px 16px; font-weight: 600;">Produção artesanal <span style="opacity: 0.55; margin: 0 6px;">•</span> Encomendas pelo WhatsApp</div>
+
+  <header id="inicio" style="position: sticky; top: 0; z-index: 90; background: rgba(255,249,247,0.94); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(168,221,216,0.45); transition: box-shadow 0.35s ease, padding 0.35s ease;" data-header="">
+    <div style="max-width: 1260px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; gap: 24px;">
+      <a href="#inicio" style="display: flex; flex-direction: column; line-height: 1; text-decoration: none; color: #343434;">
+        <span style="font-family: 'Marcellus', serif; font-size: 23px; letter-spacing: 0.02em;">Doces da Lê</span>
+        <span style="font-family: 'Caveat', cursive; font-size: 16px; color: #D4799B; margin-top: 3px;">doces artesanais</span>
+      </a>
+      <nav aria-label="Navegação principal" style="margin-left: auto; display: flex; align-items: center; gap: 30px;" data-desknav="">
+        <a href="#inicio" style="font-size: 14.5px; font-weight: 600; letter-spacing: 0.04em; color: #343434;">Início</a>
+        <a href="#doces" style="font-size: 14.5px; font-weight: 600; letter-spacing: 0.04em; color: #343434;">Nossos Doces</a>
+        <a href="#encomendas" style="font-size: 14.5px; font-weight: 600; letter-spacing: 0.04em; color: #343434;">Encomendas</a>
+        <a href="#sobre" style="font-size: 14.5px; font-weight: 600; letter-spacing: 0.04em; color: #343434;">Sobre Nós</a>
+        <a href="#contato" style="font-size: 14.5px; font-weight: 600; letter-spacing: 0.04em; color: #343434;">Contato</a>
+      </nav>
+      <a data-wa="Olá! Vim pelo site e gostaria de fazer um orçamento para uma encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="background: #F4A6BE; color: #fff; padding: 12px 22px; border-radius: 999px; font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 0 8px 18px rgba(244,166,190,0.4); transition: transform 0.25s ease, box-shadow 0.25s ease;" style-hover="transform: translateY(-2px); box-shadow: 0 12px 24px rgba(244,166,190,0.5);" data-deskcta="">Fazer encomenda</a>
+      <button type="button" aria-label="Abrir menu" aria-expanded="false" data-burger="" style="display: none; margin-left: auto; width: 46px; height: 46px; border: 1px solid rgba(168,221,216,0.8); background: #fff; border-radius: 14px; cursor: pointer; flex-direction: column; gap: 5px; align-items: center; justify-content: center;">
+        <span style="display: block; width: 20px; height: 2px; background: #343434; border-radius: 2px;"></span>
+        <span style="display: block; width: 20px; height: 2px; background: #343434; border-radius: 2px;"></span>
+        <span style="display: block; width: 20px; height: 2px; background: #343434; border-radius: 2px;"></span>
+      </button>
+    </div>
+    <div data-mobilemenu="" style="display: none; border-top: 1px solid rgba(168,221,216,0.45); background: #FFF9F7; padding: 10px 24px 22px;">
+      <nav aria-label="Navegação móvel" style="display: flex; flex-direction: column;">
+        <a href="#inicio" style="padding: 14px 4px; font-weight: 600; color: #343434; border-bottom: 1px solid rgba(168,221,216,0.35);">Início</a>
+        <a href="#doces" style="padding: 14px 4px; font-weight: 600; color: #343434; border-bottom: 1px solid rgba(168,221,216,0.35);">Nossos Doces</a>
+        <a href="#encomendas" style="padding: 14px 4px; font-weight: 600; color: #343434; border-bottom: 1px solid rgba(168,221,216,0.35);">Encomendas</a>
+        <a href="#sobre" style="padding: 14px 4px; font-weight: 600; color: #343434; border-bottom: 1px solid rgba(168,221,216,0.35);">Sobre Nós</a>
+        <a href="#contato" style="padding: 14px 4px; font-weight: 600; color: #343434;">Contato</a>
+        <a data-wa="Olá! Vim pelo site e gostaria de fazer um orçamento para uma encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="margin-top: 14px; text-align: center; background: #F4A6BE; color: #fff; padding: 15px; border-radius: 999px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; font-size: 13px;">Fazer encomenda</a>
+      </nav>
+    </div>
+  </header>
+
+  <section aria-labelledby="hero-title" style="position: relative; background: linear-gradient(180deg, #DDF3F1 0%, #CFEDEA 100%); padding: clamp(36px, 6vw, 78px) 0 clamp(86px, 9vw, 130px); overflow: hidden;">
+    <div aria-hidden="true" style="position: absolute; top: -90px; right: -70px; width: 320px; height: 320px; border-radius: 50%; background: rgba(255,255,255,0.35);"></div>
+    <div aria-hidden="true" style="position: absolute; bottom: 60px; left: -110px; width: 260px; height: 260px; border-radius: 50%; background: rgba(252,232,238,0.55);"></div>
+    <div style="position: relative; max-width: 1260px; margin: 0 auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(32px, 5vw, 64px); align-items: center;">
+
+      <div data-reveal="">
+        <p style="font-family: 'Caveat', cursive; font-size: clamp(22px, 2.6vw, 30px); color: #D4799B; margin-bottom: 10px;">Feito especialmente para você</p>
+        <h1 id="hero-title" style="font-family: 'Marcellus', serif; font-size: clamp(38px, 5.4vw, 66px); line-height: 1.06; color: #2F3E3C; letter-spacing: -0.01em;">Momentos especiais<br />merecem um <em style="font-style: italic; color: #D4799B;">toque doce.</em></h1>
+        <p style="margin-top: 22px; max-width: 470px; font-size: clamp(15.5px, 1.3vw, 17.5px); line-height: 1.75; color: #4C5C5A;">Doces e bolos artesanais preparados sob encomenda para deixar suas comemorações ainda mais especiais.</p>
+        <div style="margin-top: 34px; display: flex; flex-wrap: wrap; gap: 14px;">
+          <a href="#doces" style="background: #fff; color: #2F3E3C; padding: 17px 30px; border-radius: 999px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; box-shadow: 0 10px 26px rgba(47,62,60,0.12); transition: transform 0.25s ease;" style-hover="transform: translateY(-3px);">Conhecer nossos doces</a>
+          <a data-wa="Olá! Vim pelo site e gostaria de fazer um orçamento para uma encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="background: #F4A6BE; color: #fff; padding: 17px 30px; border-radius: 999px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; box-shadow: 0 10px 26px rgba(244,166,190,0.45); transition: transform 0.25s ease;" style-hover="transform: translateY(-3px);">Fazer uma encomenda</a>
+        </div>
+        <div style="margin-top: 38px; display: flex; align-items: center; gap: 12px; color: #4C5C5A; font-size: 14px;">
+          <span aria-hidden="true" style="display: block; width: 34px; height: 1px; background: #8FCFC9;"></span>
+          <span>Sob encomenda • valores conforme cada pedido</span>
+        </div>
+      </div>
+
+      <div data-reveal="" style="position: relative; width: 100%; aspect-ratio: 1 / 0.98; min-height: 300px;">
+        <figure style="position: absolute; left: 0; top: 4%; width: 52%; margin: 0; z-index: 2;">
+          <img decoding="async" src="assets/morangos-branco-tabua.jpg" alt="Quatro morangos cobertos com chocolate branco e farofa de morango sobre tábua de madeira" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 20px; border: 8px solid #fff; box-shadow: 0 22px 44px rgba(47,62,60,0.16);" />
+        </figure>
+        <figure style="position: absolute; right: 0; top: 0; width: 46%; margin: 0; z-index: 1;">
+          <img decoding="async" src="assets/morango-do-amor-mao.jpg" alt="Morango do amor vermelho e brilhante segurado na mão" loading="lazy" style="width: 100%; aspect-ratio: 4 / 3.4; object-fit: cover; border-radius: 20px; border: 8px solid #fff; box-shadow: 0 18px 34px rgba(47,62,60,0.14);" />
+        </figure>
+        <figure style="position: absolute; right: 3%; bottom: 8%; width: 35%; margin: 0; z-index: 1;">
+          <img decoding="async" src="assets/morango-chocolate-orquidea.jpg" alt="Morango coberto com chocolate ao leite finalizado com pedacinhos de morango" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 20px; border: 8px solid #fff; box-shadow: 0 18px 34px rgba(47,62,60,0.14);" />
+        </figure>
+        <figure style="position: absolute; left: 33%; bottom: 0; width: 30%; margin: 0; z-index: 3;">
+          <img decoding="async" src="assets/doces-gourmet-forminhas.jpg" alt="Docinhos gourmet em forminhas coloridas" loading="lazy" style="width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 18px; border: 7px solid #fff; box-shadow: 0 16px 30px rgba(47,62,60,0.16);" />
+        </figure>
+        <div aria-hidden="true" style="position: absolute; left: 46%; top: -2%; width: 13px; height: 13px; border-radius: 50%; background: #F4A6BE; z-index: 4; animation: floatSoft 6s ease-in-out infinite;"></div>
+        <div aria-hidden="true" style="position: absolute; left: 3%; bottom: 12%; width: 8px; height: 8px; border-radius: 50%; background: #fff; z-index: 4;"></div>
+        <div aria-hidden="true" style="position: absolute; right: 42%; top: 44%; width: 7px; height: 7px; border-radius: 50%; background: #fff; z-index: 4;"></div>
+      </div>
+    </div>
+    <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: -1px; height: 26px; background-image: radial-gradient(circle at 26px 26px, #FFF9F7 25px, transparent 26px); background-size: 52px 26px; background-repeat: repeat-x;"></div>
+  </section>
+
+  <section id="doces" aria-labelledby="doces-title" style="background: #fff; padding: clamp(58px, 7vw, 92px) 24px clamp(64px, 8vw, 100px);">
+    <div style="max-width: 1260px; margin: 0 auto;">
+      <div style="display: flex; flex-wrap: wrap; align-items: flex-end; gap: 22px; justify-content: space-between;" data-reveal="">
+        <div style="max-width: 640px;">
+          <p style="font-size: 12.5px; letter-spacing: 0.24em; text-transform: uppercase; color: #D4799B; font-weight: 700;">Nossa vitrine</p>
+          <h2 id="doces-title" style="font-family: 'Marcellus', serif; font-size: clamp(30px, 4vw, 48px); color: #2F3E3C; margin-top: 12px;">Nossos doces</h2>
+          <p style="margin-top: 14px; font-size: 16.5px; line-height: 1.75; color: #696969;">Conheça algumas das delícias preparadas especialmente para cada encomenda.</p>
+        </div>
+        <p style="font-family: 'Caveat', cursive; font-size: 24px; color: #A8DDD8; margin-bottom: 6px;">valores por cento e sob consulta ♡</p>
+      </div>
+
+      <div style="margin-top: 42px; display: grid; grid-template-columns: repeat(auto-fit, minmax(198px, 1fr)); gap: 22px; align-items: start;">
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/morango-do-amor-mao.jpg" alt="Morango do amor vermelho e brilhante na mão" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Morango do amor</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Morango fresco com casquinha crocante e brilhante.</p>
+          <p style="margin-top: 9px; font-size: 15px; color: #C25F84; font-weight: 700;">R$ 9,00 cada</p>
+          <a data-wa="Olá! Vi Morango do amor no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Encomendar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/morangos-branco-bandeja.jpg" alt="Bandeja com vários morangos cobertos por chocolate branco e crocante de morango" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Morango cravejado</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Morango envolvido em chocolate branco com crocante de morango.</p>
+          <p style="margin-top: 9px; font-size: 15px; color: #C25F84; font-weight: 700;">R$ 9,00 cada</p>
+          <a data-wa="Olá! Vi Morango cravejado no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Encomendar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/morango-chocolate-orquidea.jpg" alt="Morango coberto com chocolate ao leite em embalagem individual" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Bombom de morango</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">A versão com chocolate ao leite e pedacinhos de morango.</p>
+          <p style="margin-top: 9px; font-size: 15px; color: #C25F84; font-weight: 700;">R$ 9,00 cada</p>
+          <a data-wa="Olá! Vi Bombom de morango no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Encomendar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/bombom-trufado-morango.jpg" alt="Bombons de morango cobertos com chocolate, um deles cortado ao meio" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Bombom trufado de morango</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Morango inteiro com creme e cobertura de chocolate.</p>
+          <p style="margin-top: 9px; font-size: 15px; color: #C25F84; font-weight: 700;">R$ 185,00 o cento</p>
+          <a data-wa="Olá! Vi Bombom trufado de morango no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Encomendar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/bombom-uva-cortado.jpg" alt="Bombom trufado de uva com chocolate branco, cortado ao meio" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Bombons trufados</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Sabores morango, uva, coco e brigadeiro.</p>
+          <p style="margin-top: 9px; font-size: 15px; color: #C25F84; font-weight: 700;">R$ 185,00 o cento</p>
+          <a data-wa="Olá! Vi Bombons trufados no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Encomendar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/doces-gourmet-forminhas.jpg" alt="Fileiras de docinhos gourmet em forminhas coloridas" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Doces gourmet</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Ninho c/ nutela, paçoca, kit kat, dois amores, ferrero rocher, amendoim, choccobol e surpresa de uva.</p>
+          <p style="margin-top: 9px; font-size: 15px; color: #C25F84; font-weight: 700;">R$ 165,00 o cento</p>
+          <a data-wa="Olá! Vi Doces gourmet no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Encomendar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/docinhos-festa.jpg" alt="Caixa com brigadeiros e beijinhos em forminhas" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Docinhos comuns</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Brigadeiro e beijinho na quantidade que a sua festa pedir.</p>
+          <p style="margin-top: 9px; font-size: 15px; color: #C25F84; font-weight: 700;">R$ 135,00 o cento</p>
+          <a data-wa="Olá! Vi Docinhos comuns no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Encomendar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/coxinha-ferrero.jpg" alt="Coxinha de Ferrero Rocher cortada ao meio, mostrando recheio cremoso e amendoim" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Coxinha de Ferrero Rocher</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Recheio cremoso com avelã e amendoim crocante por fora.</p>
+          <p style="margin-top: 9px; font-size: 15px; color: #C25F84; font-weight: 700;">R$ 8,00 cada</p>
+          <a data-wa="Olá! Vi Coxinha de Ferrero Rocher no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Encomendar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/ovinhos-prato-rosa.jpg" alt="Quatro ovinhos de colher abertos em prato rosa, com morango, brigadeiro e amendoim" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Ovinhos de colher</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Casquinha de chocolate com recheios variados, na medida de uma colher.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Ovinhos de colher no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/kit-doces-embalagens.jpg" alt="Quatro kits individuais com ovinho de colher, morango e pedaços de chocolate" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Kit de doces</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Caixinhas individuais para presentear ou saborear a dois.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Kit de doces no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/bolo-de-corte-bandejas.jpg" alt="Bolos de corte em bandejas sobre a mesa, com chocolate, morango e pudim" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Bolo de corte</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Bolo em bandeja para servir fatiado, ideal para festas e eventos.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Bolo de corte no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/bolo-flores-frutas.jpg" alt="Bolos decorados com flores, frutas frescas e detalhes dourados" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Bolo decorado</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Bolos decorados com flores, frutas e acabamentos combinados com você.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Bolo decorado no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/bolo-branco-flores.jpg" alt="Bolo redondo com chantilly branco e flores de glacê rosa" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Bolo sob encomenda</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Recheios, cobertura e tamanho escolhidos junto com você.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Bolo sob encomenda no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/morangos-chocolate-caixa.jpg" alt="Caixa grande com dezenas de morangos cobertos de chocolate" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Caixa festa de morangos</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Quantidade conforme o número de convidados, em caixa fechada.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Caixa festa de morangos no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/fondue-frutas.jpg" alt="Kit fondue com chocolate, morango, uva, kiwi, marshmallow e biscoito" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Fondue de frutas</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Chocolate cremoso, frutas frescas, marshmallow e biscoito.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Fondue de frutas no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/ovo-colher-chocolate.jpg" alt="Ovo de colher de chocolate com bombons e amendoim picado" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Ovo de colher</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Casquinha de chocolate com recheio cremoso e crocante.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Ovo de colher no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/brigadeiro-mao.jpg" alt="Brigadeiro gourmet com castanhas em forminha de papel" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Brigadeiro gourmet</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Recheio cremoso e castanhas, em forminha decorada.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Brigadeiro gourmet no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/bolo-natal-guirlanda.jpg" alt="Bolo em formato de guirlanda com brigadeiros, nozes, cerejas e morangos" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+            <span style="position: absolute; left: 12px; top: 12px; background: #fff; color: #C25F84; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 6px 11px; border-radius: 999px;">Natal</span>
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Bolo guirlanda de Natal</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Guirlanda com brigadeiro, nozes, cereja e morangos frescos.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Bolo guirlanda de Natal no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/torta-morango-natal.jpg" alt="Torta de morango com creme embalada e finalizada com laço dourado" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+            <span style="position: absolute; left: 12px; top: 12px; background: #fff; color: #C25F84; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 6px 11px; border-radius: 999px;">Natal</span>
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Torta de morango de Natal</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Camadas de creme e morango, embalada com laço.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Torta de morango de Natal no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+        <article data-reveal="">
+          <div style="position: relative; overflow: hidden; border-radius: 18px; background: #FCE8EE;">
+            <img decoding="async" src="assets/sobremesa-uva-natal.jpg" alt="Sobremesa cremosa com uvas verdes e chocolate, com laço verde" loading="lazy" style="width: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform 0.7s ease;" style-hover="transform: scale(1.05);" />
+            <span style="position: absolute; left: 12px; top: 12px; background: #fff; color: #C25F84; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; padding: 6px 11px; border-radius: 999px;">Natal</span>
+          </div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 14px;">Sobremesa de uva de Natal</h3>
+          <p style="margin-top: 6px; font-size: 14px; line-height: 1.6; color: #696969;">Creme com uvas frescas e raspas de chocolate.</p>
+          <p style="margin-top: 9px; font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #2F6B67; font-weight: 700;">Sob encomenda</p>
+          <a data-wa="Olá! Vi Sobremesa de uva de Natal no site e gostaria de saber mais sobre valores e opções para encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; border: 1.5px solid #F4A6BE; color: #D4799B; padding: 10px 17px; border-radius: 999px; font-size: 11.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s ease, color 0.3s ease;" style-hover="background: #F4A6BE; color: #fff;">Consultar pelo WhatsApp</a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #DDF3F1; padding: clamp(60px, 8vw, 104px) 24px; position: relative; overflow: hidden;">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(36px, 6vw, 72px); align-items: center;">
+      <div data-reveal="">
+        <p style="font-size: 12.5px; letter-spacing: 0.26em; text-transform: uppercase; color: #4C8F89; font-weight: 700;">Nossa essência</p>
+        <h2 style="font-family: 'Marcellus', serif; font-size: clamp(30px, 4.2vw, 50px); line-height: 1.12; color: #2F3E3C; margin-top: 14px;">Feitos à mão,<br /><em style="font-style: italic; color: #D4799B;">com carinho.</em></h2>
+        <p style="margin-top: 20px; max-width: 460px; font-size: 16.5px; line-height: 1.8; color: #45544F;">Cada encomenda é preparada especialmente para tornar sua comemoração ainda mais gostosa. Da escolha dos sabores aos pequenos detalhes da decoração, tudo é feito pensando no seu momento.</p>
+        <p style="margin-top: 22px; font-family: 'Caveat', cursive; font-size: 26px; color: #2F3E3C;">Você imagina. A gente prepara.</p>
+      </div>
+      <div data-reveal="" style="position: relative; padding: 0 0 26px 26px;">
+        <div aria-hidden="true" style="position: absolute; left: 0; bottom: 0; width: 72%; height: 78%; border: 2px solid #F4A6BE; border-radius: 22px;"></div>
+        <img decoding="async" src="assets/morango-amor-caixinha-carro.jpg" alt="Mão segurando embalagem com dois morangos do amor vermelhos e brilhantes" loading="lazy" style="position: relative; width: 100%; aspect-ratio: 4 / 3.4; object-fit: cover; border-radius: 22px; box-shadow: 0 24px 46px rgba(47,62,60,0.18);" />
+        <div aria-hidden="true" style="position: absolute; right: -14px; top: -18px; width: 74px; height: 74px; border-radius: 50%; background: #FCE8EE;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #fff; padding: clamp(56px, 7vw, 92px) 24px;">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 620px; margin: 0 auto;" data-reveal="">
+        <h2 style="font-family: 'Marcellus', serif; font-size: clamp(28px, 3.6vw, 43px); color: #2F3E3C;">Doces para cada momento</h2>
+        <p style="margin-top: 14px; font-size: 16px; line-height: 1.75; color: #696969;">Do bolo de aniversário à lembrancinha de chá de bebê, a encomenda é montada junto com você.</p>
+      </div>
+      <div style="margin-top: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(185px, 1fr)); gap: 24px;">
+        <div data-reveal="" style="background: #FCE8EE; border-radius: 22px; padding: 28px 22px; text-align: center;">
+          <div aria-hidden="true" style="width: 46px; height: 46px; margin: 0 auto 14px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center;"><span style="display: block; width: 16px; height: 16px; background: #F4A6BE; border-radius: 50% 50% 50% 3px; transform: rotate(45deg);"></span></div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 18.5px; color: #2F3E3C;">Aniversários</h3>
+          <p style="margin-top: 8px; font-size: 14.5px; line-height: 1.65; color: #6E6A6C;">Bolos e doces combinando com o tema da festa.</p>
+        </div>
+        <div data-reveal="" style="background: #DDF3F1; border-radius: 22px; padding: 28px 22px; text-align: center; margin-top: 18px;">
+          <div aria-hidden="true" style="width: 46px; height: 46px; margin: 0 auto 14px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center;"><span style="display: block; width: 16px; height: 16px; background: #A8DDD8; border-radius: 3px; transform: rotate(45deg);"></span></div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 18.5px; color: #2F3E3C;">Presentes</h3>
+          <p style="margin-top: 8px; font-size: 14.5px; line-height: 1.65; color: #59645F;">Caixinhas para presentear em qualquer data.</p>
+        </div>
+        <div data-reveal="" style="background: #FCE8EE; border-radius: 22px; padding: 28px 22px; text-align: center;">
+          <div aria-hidden="true" style="width: 46px; height: 46px; margin: 0 auto 14px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center;"><span style="display: block; width: 18px; height: 9px; border-radius: 0 0 30px 30px; background: #F4A6BE;"></span></div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 18.5px; color: #2F3E3C;">Casamentos</h3>
+          <p style="margin-top: 8px; font-size: 14.5px; line-height: 1.65; color: #6E6A6C;">Mesas de doces e lembranças para os convidados.</p>
+        </div>
+        <div data-reveal="" style="background: #DDF3F1; border-radius: 22px; padding: 28px 22px; text-align: center; margin-top: 18px;">
+          <div aria-hidden="true" style="width: 46px; height: 46px; margin: 0 auto 14px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center;"><span style="display: block; width: 14px; height: 14px; background: #A8DDD8; border-radius: 50%;"></span></div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 18.5px; color: #2F3E3C;">Chá de bebê</h3>
+          <p style="margin-top: 8px; font-size: 14.5px; line-height: 1.65; color: #59645F;">Doces delicados nas cores da comemoração.</p>
+        </div>
+        <div data-reveal="" style="background: #FFF9F7; border: 1px solid #F6DDE4; border-radius: 22px; padding: 28px 22px; text-align: center;">
+          <div aria-hidden="true" style="width: 46px; height: 46px; margin: 0 auto 14px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center;"><span style="display: block; width: 16px; height: 16px; background: #F4A6BE; border-radius: 50% 0 50% 50%;"></span></div>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 18.5px; color: #2F3E3C;">Datas especiais</h3>
+          <p style="margin-top: 8px; font-size: 14.5px; line-height: 1.65; color: #6E6A6C;">Dia das mães, namorados e outras ocasiões.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="galeria-title" style="background: #FFF9F7; padding: clamp(58px, 7vw, 96px) 24px;">
+    <div style="max-width: 1260px; margin: 0 auto;">
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 18px;" data-reveal="">
+        <h2 id="galeria-title" style="font-family: 'Marcellus', serif; font-size: clamp(28px, 3.8vw, 45px); color: #2F3E3C;">Feitos para adoçar momentos</h2>
+        <p style="font-size: 15.5px; color: #696969; max-width: 380px;">Um pouquinho do nosso trabalho, direto da bancada para a sua mesa.</p>
+      </div>
+      <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 18px;">
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #DDF3F1; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/morangos-branco-bandeja.jpg" alt="Morangos cravejados com chocolate branco e crocante de morango em forminhas" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #FCE8EE; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/morango-do-amor-mao.jpg" alt="Morango do amor vermelho e brilhante segurado na mão" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #DDF3F1; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/bombom-trufado-morango.jpg" alt="Bombons de morango cobertos com chocolate, um deles cortado ao meio" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #FCE8EE; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/doces-gourmet-forminhas.jpg" alt="Fileiras de docinhos gourmet em forminhas coloridas" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #DDF3F1; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/bolo-de-corte-bandejas.jpg" alt="Bolos de corte em bandejas prontos para servir" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #FCE8EE; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/bolo-flores-frutas.jpg" alt="Bolos decorados com flores e frutas frescas" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #DDF3F1; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/ovinhos-prato-rosa.jpg" alt="Ovinhos de colher abertos em prato rosa" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #FCE8EE; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/coxinha-ferrero.jpg" alt="Coxinha de Ferrero Rocher cortada ao meio" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #DDF3F1; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/kit-doces-embalagens.jpg" alt="Kits individuais de doces em embalagens transparentes" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #FCE8EE; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/morango-amor-caixinha-carro.jpg" alt="Dois morangos do amor em embalagem individual" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #DDF3F1; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/fondue-frutas.jpg" alt="Kit de fondue com frutas, marshmallow e biscoito" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+        <figure data-reveal="" style="margin: 0; overflow: hidden; border-radius: 22px; background: #FCE8EE; aspect-ratio: 1 / 1;">
+          <img decoding="async" src="assets/bolo-natal-guirlanda.jpg" alt="Bolo guirlanda de Natal decorado com frutas e brigadeiros" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s ease;" style-hover="transform: scale(1.05);" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="encomendas" aria-labelledby="encomendas-title" style="position: relative; background: #DDF3F1; padding: clamp(60px, 8vw, 100px) 24px;">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;" data-reveal="">
+        <p style="font-family: 'Caveat', cursive; font-size: 26px; color: #D4799B;">simples assim</p>
+        <h2 id="encomendas-title" style="font-family: 'Marcellus', serif; font-size: clamp(29px, 3.8vw, 45px); color: #2F3E3C; margin-top: 6px;">Como fazer sua encomenda?</h2>
+      </div>
+      <ol style="margin: 46px 0 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 22px;">
+        <li data-reveal="" style="background: #fff; border-radius: 22px; padding: 30px 26px;">
+          <span style="font-family: 'Marcellus', serif; font-size: 30px; color: #A8DDD8;">01</span>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 8px; letter-spacing: 0.04em;">ESCOLHA</h3>
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7; color: #696969;">Veja nossos doces e encontre a opção que combina com sua ocasião.</p>
+        </li>
+        <li data-reveal="" style="background: #fff; border-radius: 22px; padding: 30px 26px; margin-top: 16px;">
+          <span style="font-family: 'Marcellus', serif; font-size: 30px; color: #F4A6BE;">02</span>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 8px; letter-spacing: 0.04em;">CONVERSE COM A GENTE</h3>
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7; color: #696969;">Conte pelo WhatsApp o que você deseja, quantidade e data.</p>
+        </li>
+        <li data-reveal="" style="background: #fff; border-radius: 22px; padding: 30px 26px;">
+          <span style="font-family: 'Marcellus', serif; font-size: 30px; color: #A8DDD8;">03</span>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 8px; letter-spacing: 0.04em;">PERSONALIZE</h3>
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7; color: #696969;">Combine sabores, tamanho, decoração e outros detalhes.</p>
+        </li>
+        <li data-reveal="" style="background: #fff; border-radius: 22px; padding: 30px 26px; margin-top: 16px;">
+          <span style="font-family: 'Marcellus', serif; font-size: 30px; color: #F4A6BE;">04</span>
+          <h3 style="font-family: 'Marcellus', serif; font-size: 19px; color: #2F3E3C; margin-top: 8px; letter-spacing: 0.04em;">PRONTINHO ♡</h3>
+          <p style="margin-top: 10px; font-size: 15px; line-height: 1.7; color: #696969;">Depois de tudo combinado, sua encomenda será preparada especialmente para você.</p>
+        </li>
+      </ol>
+      <div style="text-align: center; margin-top: 40px;" data-reveal="">
+        <a data-wa="Olá! Vim pelo site e gostaria de fazer um orçamento para uma encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; background: #2F3E3C; color: #fff; padding: 18px 34px; border-radius: 999px; font-size: 13px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; transition: transform 0.25s ease;" style-hover="transform: translateY(-3px);">Fazer minha encomenda</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre" aria-labelledby="sobre-title" style="background: #fff; padding: clamp(60px, 8vw, 100px) 24px;">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(34px, 6vw, 70px); align-items: center;">
+      <div data-reveal="" style="position: relative; padding: 24px 24px 0 0;">
+        <div aria-hidden="true" style="position: absolute; right: 0; top: 0; width: 70%; height: 74%; background: #DDF3F1; border-radius: 22px;"></div>
+        <img decoding="async" src="assets/bolo-branco-flores.jpg" alt="Bolo artesanal com chantilly branco e flores de glacê rosa feito por encomenda" loading="lazy" style="position: relative; width: 100%; aspect-ratio: 4 / 3.6; object-fit: cover; border-radius: 22px; box-shadow: 0 22px 44px rgba(47,62,60,0.16);" />
+      </div>
+      <div data-reveal="">
+        <p style="font-size: 12.5px; letter-spacing: 0.26em; text-transform: uppercase; color: #D4799B; font-weight: 700;">Sobre nós</p>
+        <h2 id="sobre-title" style="font-family: 'Marcellus', serif; font-size: clamp(28px, 3.8vw, 44px); line-height: 1.15; color: #2F3E3C; margin-top: 14px;">Prazer, eu sou a Letícia.</h2>
+        <p style="margin-top: 20px; max-width: 490px; font-size: 16.5px; line-height: 1.8; color: #696969;">Comecei a fazer doces buscando uma forma de complementar minha renda e, aos poucos, fui me apaixonando pela confeitaria. A cada receita, cada detalhe e cada encomenda, percebi o quanto amo transformar ingredientes em algo especial.</p>
+        <p style="margin-top: 16px; max-width: 490px; font-size: 16.5px; line-height: 1.8; color: #696969;">Hoje, preparo cada pedido com muito carinho e dedicação, sempre buscando fazer algo bonito, gostoso e especial para cada momento.</p>
+        <p style="margin-top: 16px; max-width: 490px; font-size: 16.5px; line-height: 1.8; color: #696969;">Sou a Letícia, e fico muito feliz em poder fazer parte das suas comemorações através do meu trabalho. 💕</p>
+        <div style="margin-top: 28px; display: flex; flex-wrap: wrap; gap: 30px;">
+          <div><p style="font-family: 'Marcellus', serif; font-size: 27px; color: #2F3E3C;">100%</p><p style="font-size: 14px; color: #696969;">artesanal</p></div>
+          <div><p style="font-family: 'Marcellus', serif; font-size: 27px; color: #2F3E3C;">Sob medida</p><p style="font-size: 14px; color: #696969;">para cada ocasião</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showTestimonials }}" hint-placeholder-val="{{ true }}">
+    <section style="background: #FCE8EE; padding: clamp(54px, 7vw, 88px) 24px;">
+      <div style="max-width: 1180px; margin: 0 auto;">
+        <div style="text-align: center;" data-reveal="">
+          <h2 style="font-family: 'Marcellus', serif; font-size: clamp(27px, 3.4vw, 41px); color: #2F3E3C;">Quem já provou</h2>
+          <p style="margin-top: 12px; font-size: 15.5px; color: #7A7275;">Comentários deixados por clientes no Instagram.</p>
+        </div>
+        <div style="margin-top: 38px; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px;">
+          <blockquote data-reveal="" style="margin: 0; background: #fff; border-radius: 22px; padding: 30px 26px;">
+            <span aria-hidden="true" style="font-family: 'Marcellus', serif; font-size: 34px; color: #F4A6BE; line-height: 1;">“</span>
+            <p style="margin-top: 8px; font-size: 15.5px; line-height: 1.75; color: #5F5A5C;">Muito bom, são doces de muita qualidade e trazem carinho a cada mordida</p>
+            <footer style="margin-top: 16px; font-size: 13.5px; color: #A08E95; letter-spacing: 0.06em;">b.eatriz.r.m</footer>
+          </blockquote>
+          <blockquote data-reveal="" style="margin: 0; background: #fff; border-radius: 22px; padding: 30px 26px;">
+            <span aria-hidden="true" style="font-family: 'Marcellus', serif; font-size: 34px; color: #A8DDD8; line-height: 1;">“</span>
+            <p style="margin-top: 8px; font-size: 15.5px; line-height: 1.75; color: #5F5A5C;">Os melhores da vida</p>
+            <footer style="margin-top: 16px; font-size: 13.5px; color: #A08E95; letter-spacing: 0.06em;">pedrorodrigues_12</footer>
+          </blockquote>
+          <blockquote data-reveal="" style="margin: 0; background: #fff; border-radius: 22px; padding: 30px 26px;">
+            <span aria-hidden="true" style="font-family: 'Marcellus', serif; font-size: 34px; color: #F4A6BE; line-height: 1;">“</span>
+            <p style="margin-top: 8px; font-size: 15.5px; line-height: 1.75; color: #5F5A5C;">Explosão de delícias numa foto só</p>
+            <footer style="margin-top: 16px; font-size: 13.5px; color: #A08E95; letter-spacing: 0.06em;">_anapaullanails</footer>
+          </blockquote>
+          <blockquote data-reveal="" style="margin: 0; background: #fff; border-radius: 22px; padding: 30px 26px;">
+            <span aria-hidden="true" style="font-family: 'Marcellus', serif; font-size: 34px; color: #A8DDD8; line-height: 1;">“</span>
+            <p style="margin-top: 8px; font-size: 15.5px; line-height: 1.75; color: #5F5A5C;">Tops</p>
+            <footer style="margin-top: 16px; font-size: 13.5px; color: #A08E95; letter-spacing: 0.06em;">gcm_bastos</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+  </sc-if>
+
+  <section style="position: relative; background: #F4A6BE; padding: clamp(64px, 8vw, 106px) 24px; overflow: hidden; text-align: center;">
+    <div aria-hidden="true" style="position: absolute; top: -60px; left: -40px; width: 220px; height: 220px; border-radius: 50%; background: rgba(255,255,255,0.18);"></div>
+    <div aria-hidden="true" style="position: absolute; bottom: -80px; right: -30px; width: 260px; height: 260px; border-radius: 50%; background: rgba(255,255,255,0.14);"></div>
+    <div style="position: relative; max-width: 720px; margin: 0 auto;" data-reveal="">
+      <span aria-hidden="true" style="display: block; width: 22px; height: 22px; margin: 0 auto 18px; background: #fff; border-radius: 50% 50% 50% 4px; transform: rotate(45deg);"></span>
+      <h2 style="font-family: 'Marcellus', serif; font-size: clamp(30px, 4.2vw, 50px); line-height: 1.14; color: #fff;">Tem uma ocasião especial chegando?</h2>
+      <p style="margin: 20px auto 0; max-width: 560px; font-size: 16.5px; line-height: 1.8; color: #fff;">Conte pra gente o que você imaginou. Vamos conversar sobre sabores, detalhes e preparar uma encomenda especial para o seu momento.</p>
+      <a data-wa="Olá! Vim pelo site e gostaria de conversar sobre uma encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 32px; background: #fff; color: #C25F84; padding: 19px 36px; border-radius: 999px; font-size: 13.5px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; box-shadow: 0 14px 30px rgba(120,40,70,0.2); transition: transform 0.25s ease;" style-hover="transform: translateY(-3px);">Pedir orçamento pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <section id="contato" aria-labelledby="contato-title" style="background: #FFF9F7; padding: clamp(58px, 7vw, 92px) 24px;">
+    <div style="max-width: 1180px; margin: 0 auto;">
+      <h2 id="contato-title" style="font-family: 'Marcellus', serif; font-size: clamp(27px, 3.4vw, 41px); color: #2F3E3C; text-align: center;" data-reveal="">Fale com a gente</h2>
+      <div style="margin-top: 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px;">
+        <div data-reveal="" style="background: #fff; border-radius: 20px; padding: 28px 24px;">
+          <p style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #A8DDD8; font-weight: 700;">WhatsApp</p>
+          <p style="margin-top: 10px; font-family: 'Marcellus', serif; font-size: 21px; color: #2F3E3C;">(31) 98248-1877</p>
+          <a data-wa="Olá! Vim pelo site e gostaria de fazer um orçamento para uma encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; font-size: 14px; font-weight: 700; color: #D4799B;">Abrir conversa →</a>
+        </div>
+        <div data-reveal="" style="background: #fff; border-radius: 20px; padding: 28px 24px;">
+          <p style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #A8DDD8; font-weight: 700;">Instagram</p>
+          <p style="margin-top: 10px; font-family: 'Marcellus', serif; font-size: 21px; color: #2F3E3C;">@doces_gourmetls</p>
+          <a href="https://instagram.com/doces_gourmetls" target="_blank" rel="noopener" style="display: inline-block; margin-top: 12px; font-size: 14px; font-weight: 700; color: #D4799B;">Ver o Instagram →</a>
+        </div>
+        <div data-reveal="" style="background: #fff; border-radius: 20px; padding: 28px 24px;">
+          <p style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #A8DDD8; font-weight: 700;">Atendimento</p>
+          <p style="margin-top: 10px; font-family: 'Marcellus', serif; font-size: 21px; color: #2F3E3C;">Betim e região</p>
+          <p style="margin-top: 12px; font-size: 14px; color: #696969;">Betim, Contagem, Belo Horizonte e cidades próximas.</p>
+        </div>
+        <div data-reveal="" style="background: #DDF3F1; border-radius: 20px; padding: 28px 24px;">
+          <p style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #4C8F89; font-weight: 700;">Encomendas</p>
+          <p style="margin-top: 10px; font-family: 'Marcellus', serif; font-size: 21px; color: #2F3E3C;">Sob consulta</p>
+          <p style="margin-top: 12px; font-size: 14px; color: #45544F;">Valores conforme quantidade, sabor e decoração.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #2F3E3C; color: #E6F1EF; padding: clamp(46px, 6vw, 68px) 24px 30px;">
+    <div style="max-width: 1180px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 34px;">
+      <div>
+        <p style="font-family: 'Marcellus', serif; font-size: 23px; color: #fff;">Doces da Lê</p>
+        <p style="font-family: 'Caveat', cursive; font-size: 19px; color: #A8DDD8; margin-top: 4px;">doces artesanais</p>
+        <p style="margin-top: 14px; font-size: 15px; line-height: 1.7; color: #C8DAD7;">Doces artesanais feitos sob encomenda.</p>
+      </div>
+      <div>
+        <p style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #8FBDB7; font-weight: 700;">Navegação</p>
+        <nav aria-label="Navegação do rodapé" style="margin-top: 14px; display: flex; flex-direction: column; gap: 10px;">
+          <a href="#inicio" style="font-size: 15px; color: #E6F1EF;">Início</a>
+          <a href="#doces" style="font-size: 15px; color: #E6F1EF;">Nossos Doces</a>
+          <a href="#encomendas" style="font-size: 15px; color: #E6F1EF;">Encomendas</a>
+          <a href="#sobre" style="font-size: 15px; color: #E6F1EF;">Sobre Nós</a>
+          <a href="#contato" style="font-size: 15px; color: #E6F1EF;">Contato</a>
+        </nav>
+      </div>
+      <div>
+        <p style="font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase; color: #8FBDB7; font-weight: 700;">Contato</p>
+        <div style="margin-top: 14px; display: flex; flex-direction: column; gap: 10px;">
+          <a data-wa="Olá! Vim pelo site e gostaria de fazer um orçamento para uma encomenda." href="https://wa.me/" target="_blank" rel="noopener" style="font-size: 15px; color: #E6F1EF;">WhatsApp — (31) 98248-1877</a>
+          <a href="https://instagram.com/doces_gourmetls" target="_blank" rel="noopener" style="font-size: 15px; color: #E6F1EF;">Instagram — @doces_gourmetls</a>
+          <span style="font-size: 15px; color: #C8DAD7;">Atendimento — Betim e região</span>
+        </div>
+      </div>
+    </div>
+    <div style="max-width: 1180px; margin: 36px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.14); font-size: 13.5px; color: #A7C1BC; text-align: center;">© 2026 Doces da Lê. Todos os direitos reservados.</div>
+  </footer>
+
+  <a data-wa="Olá! Vim pelo site e gostaria de fazer um orçamento para uma encomenda." href="https://wa.me/" target="_blank" rel="noopener" aria-label="Falar no WhatsApp" data-float="" style="position: fixed; right: 20px; bottom: 20px; z-index: 95; width: 60px; height: 60px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; box-shadow: 0 12px 26px rgba(37,211,102,0.4); animation: waPop 0.7s cubic-bezier(0.2,0.9,0.3,1) 0.9s both; transition: transform 0.25s ease;" style-hover="transform: scale(1.07);">
+    <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" focusable="false"><path fill="#fff" d="M16.04 3.2c-7.08 0-12.8 5.72-12.8 12.8 0 2.26.6 4.38 1.64 6.22L3.2 28.8l6.76-1.72a12.74 12.74 0 0 0 6.08 1.54c7.08 0 12.8-5.72 12.8-12.8S23.12 3.2 16.04 3.2Zm0 23.02c-1.94 0-3.76-.52-5.32-1.44l-.38-.22-3.98 1.02 1.06-3.88-.24-.4a10.2 10.2 0 0 1-1.56-5.44c0-5.66 4.6-10.26 10.26-10.26 5.66 0 10.24 4.6 10.24 10.26 0 5.66-4.58 10.36-10.08 10.36Zm5.64-7.68c-.3-.16-1.84-.9-2.12-1-.28-.1-.5-.16-.7.16-.2.3-.78.98-.96 1.18-.18.2-.36.22-.66.08-.3-.16-1.28-.48-2.44-1.5-.9-.8-1.5-1.8-1.68-2.1-.18-.3-.02-.46.14-.62.14-.14.3-.36.46-.54.14-.18.2-.3.3-.5.1-.2.04-.38-.04-.54-.08-.16-.7-1.7-.96-2.32-.26-.6-.5-.52-.7-.52h-.6c-.2 0-.52.08-.8.38-.28.3-1.06 1.04-1.06 2.52s1.08 2.92 1.24 3.12c.16.2 2.1 3.34 5.1 4.56 2.98 1.2 3.34 1.06 3.96 1 .6-.06 1.94-.8 2.22-1.56.28-.78.28-1.44.2-1.58-.08-.14-.28-.22-.58-.38Z"/></svg>
+  </a>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;whatsappNumber&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;5531982481877&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contato&quot;},&quot;showTestimonials&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Seções&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { showTestimonials: this.props.showTestimonials ?? true };
+  }
+
+  componentDidMount() {
+    this.applyWhatsapp();
+    this.setupMenu();
+    this.setupHeader();
+    this.setupReveal();
+  }
+
+  componentDidUpdate() { this.applyWhatsapp(); }
+
+  root() { return this._rootEl || (this._rootEl = document.querySelector('[data-header]')?.closest('div')) || document; }
+
+  applyWhatsapp() {
+    const number = (this.props.whatsappNumber ?? '5531982481877').replace(/\D/g, '');
+    document.querySelectorAll('[data-wa]').forEach(el => {
+      el.setAttribute('href', 'https://wa.me/' + number + '?text=' + encodeURIComponent(el.getAttribute('data-wa') || ''));
+    });
+  }
+
+  setupMenu() {
+    const burger = document.querySelector('[data-burger]');
+    const panel = document.querySelector('[data-mobilemenu]');
+    const nav = document.querySelector('[data-desknav]');
+    const cta = document.querySelector('[data-deskcta]');
+    if (!burger || !panel) return;
+    let open = false;
+    const layout = () => {
+      const compact = window.innerWidth < 980;
+      burger.style.display = compact ? 'flex' : 'none';
+      if (nav) nav.style.display = compact ? 'none' : 'flex';
+      if (cta) cta.style.display = compact ? 'none' : 'inline-block';
+      if (!compact) { open = false; panel.style.display = 'none'; burger.setAttribute('aria-expanded', 'false'); }
+    };
+    const toggle = () => {
+      open = !open;
+      panel.style.display = open ? 'block' : 'none';
+      burger.setAttribute('aria-expanded', String(open));
+      burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    };
+    burger.addEventListener('click', toggle);
+    panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { if (open) toggle(); }));
+    window.addEventListener('resize', layout);
+    layout();
+  }
+
+  setupHeader() {
+    const header = document.querySelector('[data-header]');
+    if (!header) return;
+    const onScroll = () => {
+      header.style.boxShadow = window.scrollY > 24 ? '0 8px 26px rgba(47,62,60,0.09)' : 'none';
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  setupReveal() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const els = Array.from(document.querySelectorAll('[data-reveal]'));
+    if (!els.length || !('IntersectionObserver' in window)) return;
+    els.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 0.7s ease, transform 0.7s cubic-bezier(0.22,0.8,0.3,1)';
+    });
+    const show = (el) => { el.style.opacity = '1'; el.style.transform = 'none'; };
+    const pending = new Set(els);
+    const check = () => {
+      const h = window.innerHeight || 800;
+      let i = 0;
+      pending.forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top < h * 0.92 && r.bottom > 0) {
+          const d = i++ * 60;
+          pending.delete(el);
+          if (d) setTimeout(() => show(el), d); else show(el);
+        }
+      });
+      if (!pending.size) {
+        window.removeEventListener('scroll', onScroll);
+        window.removeEventListener('resize', onScroll);
+      }
+    };
+    let raf = 0;
+    const onScroll = () => { if (raf) return; raf = requestAnimationFrame(() => { raf = 0; check(); }); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    check();
+    setTimeout(check, 400);
+    setTimeout(() => { pending.forEach(show); }, 2500);
+  }
+}
+
+</script>
+</body>
+</html>
